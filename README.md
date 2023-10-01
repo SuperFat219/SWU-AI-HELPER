@@ -1,3 +1,13 @@
+<!--
+ * @Author: Johnson 1103894895@qq.com
+ * @Date: 2023-10-01 10:57:11
+ * @LastEditors: Johnson 1103894895@qq.com
+ * @LastEditTime: 2023-10-01 20:40:05
+ * @FilePath: \SWU-AI-HELPER\README.md
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by Johnson, All Rights Reserved. 
+-->
 # 西南大学人工智能学院生存指南
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)、[浙江大学](https://github.com/QSCTech/zju-icicles)和[西南大学软件学院](https://github.com/SambacFeng/SWU-SE-HELPER)相关项目启发，创立了本项目
@@ -25,7 +35,7 @@
    1. 提交 PR：上传完文件到个人仓库之后，**点击 Pull Request** 即可(一定要发起PR才可以让所有人都看到哦)。请留意一下项目的文件组织。
    2. 也可以直接附加在 Issue 中并附加文件内容等相关信息，由维护者进行添加。
 
-如单文件大于25MB，请使用 [git](https://git-scm.com/) 或 [GitHub Desktop](https://desktop.github.com/) 等git客户端，将仓库clone到本地后进行相关操作。本项目未开启大文件支持，超过100MB的单文件请上传至网盘并将网盘链接添加到对应的README中。
+如单文件大于25MB，请使用 [git](https://git-scm.com/) 或 [GitHub Desktop](https://desktop.github.com/) 等git客户端，将仓库clone到本地后进行相关操作。本项目未开启大文件支持，超过50MB的单文件请上传至网盘并将网盘链接添加到对应的README中。
 
 如果您不了解GitHub相关操作(强烈建议您抽出些许时间学习一下git和GitHub相关操作，这会对您的学习很有帮助)或希望匿名贡献，可以email至此邮箱，注明"AI-HELPER"和您发送的内容即可： zydeyzs@gmail.com
 
