@@ -1,0 +1,6 @@
+Smith, John,    100,0,0
+CableGuy, Larry,  0,100,0
+Harder, Try,      0,0,100
+Python, Monty,  100,100,100
+Frost, Jack,     50,50,50
+Jones, Terry,    75, 75, 75

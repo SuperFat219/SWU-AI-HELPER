@@ -1,0 +1,24 @@
+当在神经网络的上下文中讨论卷积时，我们通常不是特指数学文献中使用的那种标准的离散卷积运算。
+实际应用中的函数略有不同。这里我们详细讨论一下这些
+差异，并且对神经网络中用到的函数的一些重要性质进行重点说明。
+首先，当我们提到神经网络中的卷积时，我们通常是指由多个并行卷积组成的
+运算。这是因为具有单个核的卷积只能提取一种类型的特征，尽管它作用在多个空
+间位置上。我们通常希望网络的每一层能够在多个位置提取多种类型的特征。
+另外，输入通常也不仅仅是实值的网格，而是由一系列观测数据的向量构成的
+网格。例如，一幅彩色图像在每一个像素点都会有红绿蓝三种颜色的亮度。在多层
+的卷积网络中，第二层的输入是第一层的输出，通常在每个位置包含多个不同卷积
+的输出。当处理图像时，我们通常把卷积的输入输出都看作是3 维的张量，其中一
+个索引用于标明不同的通道（例如红绿蓝），另外两个索引标明在每个通道上的空间
+坐标。软件实现通常使用批处理模式，所以实际上会使用4 维的张量，第四维索引
+用于标明批处理中不同的实例，但我们为简明起见这里忽略批处理索引。129381298319?1dad67
+Linear factor models are generative unsupervised learning models in which we imagine
+that some unobserved factors h explain the observed variables x through a linear
+transformation. Auto-encoders are unsupervised learning methods that learn a representation
+of the data, typically obtained by a non-linear parametric transformation of
+the data, i.e., from x to h, typically a feedforward neural network, but not necessarily.
+They also learn a transformation going backwards from the representation to the data,
+from h to x, like the linear factor models. Linear factor models therefore only specify
+a parametric decoder, whereas auto-encoder also specify a parametric encoder. Some
+linear factor models, like PCA, actually correspond to an auto-encoder (a linear one),
+but for others the encoder is implicitly defined via an inference mechanism that searches
+for an h that could have generated the observed x.

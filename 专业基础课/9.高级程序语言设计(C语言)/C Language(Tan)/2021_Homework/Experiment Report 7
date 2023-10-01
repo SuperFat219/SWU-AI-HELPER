@@ -1,0 +1,50 @@
+#include <stdio.h>
+struct student
+{
+    int num;
+    char name[10];
+    float score[3];
+    float aver;
+} stu[10];
+void input(struct student s[], int n);
+void average(struct student s[], int n);
+void high_score(struct student s[], int n);
+int main()
+{
+    input(stu, 10);
+    average(stu, 10);
+    high_score(stu, 10);
+    return 0;
+}
+void input(struct student s[], int n)
+{
+    int i, j;
+    for (i=0; i<n; i++){
+        printf("Please enter No.%d student num name score: ", i+1);
+        scanf("%d %s", &s[i].num, s[i].name);
+        for (j=0; j<3; scanf("%f", &s[i].score[j++]));
+    }
+}
+void average(struct student s[], int n)
+{
+    int i, j;
+    float sum;
+    for (i=0, sum=0.0; i<n; i++)
+        for (j=0; j<3; sum+=s[i].score[j++]);
+    printf("Average=%.2f\n", sum/n);
+}
+void high_score(struct student s[], int n)
+{
+    int i, j;
+    float sum;
+    struct student temp;
+    for (i=0; i<n; i++){
+        for (j=0, sum=0.0; j<3; sum+=s[i].score[j++]);
+        s[i].aver=sum/3;
+    }
+    for (i=0; i<n; i++)
+        for (j=i+1; j<n; s[i].aver<s[j].aver ? temp=s[i], s[i]=s[j], s[j]=temp, j++ : j++);
+    printf("The highest student info: %d %-5s ", s[0].num, s[0].name);
+    for (i=0; i<3; printf("%.2f ", s[0].score[i++]));
+    printf("%.2f\n", s[0].aver);
+}
