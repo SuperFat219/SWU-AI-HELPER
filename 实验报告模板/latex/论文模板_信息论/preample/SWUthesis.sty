@@ -1,0 +1,292 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Southwest University undergraduate Template
+%% Template by Xiaomin Bao, <xbao@swu.edu.cn>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{SWUthesis}[2015/6/14 v1.0 SWU undergraduate thesis]
+\typeout{SWU latex template thesis for undergraduate Version 1.0}
+
+% packages
+\RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
+\RequirePackage{pstricks}
+\RequirePackage{paralist} 
+\RequirePackage{epstopdf}
+\RequirePackage{color}            % color image and color definition
+\RequirePackage{fancyhdr,fancybox}% personalize page header
+\RequirePackage{graphicx}         % include graphics
+\RequirePackage{ifthen}           % logic options
+\RequirePackage{lastpage}         % refer to the number of last page
+\RequirePackage{listings}         % format source code
+\RequirePackage[toc,page,title,titletoc,header]{appendix}%附录制作
+\RequirePackage{enumerate}
+\RequirePackage{multicol}
+\setlength{\columnsep}{0.6cm}
+%\RequirePackage{ccmap}% 加此package，用PDFLatex编译后生成的PDF文件可以复制上面的汉字
+%\RequirePackage{CCTfntef}
+%\RequirePackage[fleqn]{amsmath}
+
+\let\itemize\compactitem 
+\let\enditemize\endcompactitem 
+\let\enumerate\compactenum 
+\let\endenumerate\endcompactenum 
+\let\description\compactdesc 
+\let\enddescription\endcompactdesc
+
+%下面两行在使用2.9.0.152版时是必须的，如果没有编译时会出问题。
+%\standardtilde\let\standardtilde=\relax
+%\RequirePackage{CJK}
+
+%======数学公式==========================
+\RequirePackage{amsthm,amsfonts}
+\RequirePackage{amsmath,bm}              % AMSLaTeX
+\RequirePackage{amssymb,mathrsfs}        % AMSLaTeX sym-bols
+\RequirePackage{latexsym}
+\RequirePackage{braket}
+\RequirePackage{cases,verbatim}
+%========================================
+\RequirePackage{multicol,parallel}
+\RequirePackage{tabu}
+\RequirePackage{ccaption}
+\RequirePackage{caption3}
+\RequirePackage{subfigure,wrapfig}
+\RequirePackage{longtable,multirow,hhline, tabularx,array}%@@表格相关slashbox
+\RequirePackage{flafter}
+\RequirePackage{pifont,calc}
+\RequirePackage{colortbl,booktabs,cite,lastpage,xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{epstopdf}
+\RequirePackage{epsf,cite,makeidx}
+\RequirePackage{makeidx}
+%\makeindex
+\bibliographystyle{plain}
+%\renewcommand\citeleft{(} \renewcommand\citeright{)}
+\renewcommand\citemid{;\nolinebreak[3] }
+%\RequirePackage{notebook2e}
+%\RequirePackage{tikz}
+%\usetikzlibrary{arrows,shapes}
+%\tikzstyle{every picture}+=[remember picture]
+%\tikzstyle{na} = [baseline=-.5ex]
+\RequirePackage[
+    paperwidth=210mm,
+    paperheight=297mm,
+    text={160mm,240mm}, % 等号“="与{160mm,240mm}之间不能留空格
+    left=20mm,right=20mm,
+    vmarginratio=24:19,
+    includeheadfoot,
+    ]
+{geometry}
+\definecolor{grey}{rgb}{0.91,0.91,0.91}
+\RequirePackage{background}
+%\SetBgContents{XMB}
+\SetBgAngle{-45}
+\SetBgColor{white}
+\SetBgOpacity{0.08}
+% Declare Options
+\newcommand{\SWU@control}{2012}
+\DeclareOption*
+{
+    \edef\SWU@control{\CurrentOption}
+}
+
+% Process Options
+\ProcessOptions
+%\newcommand{\control}{\SWU@control}
+\newcommand{\xueyuan}{\SWU@control}
+\newcommand{\beishu}{1.5}
+\newcommand{\yuanbeishu}{1}
+%\newcommand{\zhuanye}{ \SWU@control}
+%\newcommand{\banji}{ \SWU@control}
+%\newcommand{\xuehao}{ \SWU@control}
+%\newcommand{\xinmin}{ \SWU@control}
+
+% if we are running pdflatex?
+\RequirePackage{ifpdf}
+% style: hyperlinked references
+\ifpdf
+\RequirePackage{epstopdf}
+\DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.gif,.eps}
+\RequirePackage[
+    CJKbookmarks       = true,
+    pdftitle           = {Thesis Template For Undergraduate Students},
+    pdfauthor          = {Xiaomin Bao},
+    pdfsubject         = {LaTex Template Designed By X. Bao},
+    pdfkeywords        = {0545 1420 2404 6080 6060},
+    pdfdisplaydoctitle = true,
+    bookmarksnumbered  = true,%
+    bookmarksopen      = true, %
+    pdfborder          = 001,     %注释掉此项则交叉引用为彩色边框
+    %pdfpagemode        = FullScreen,
+    colorlinks         = true,%
+    linkcolor          = blue,%
+    citecolor          = blue,%
+    pagecolor          = blue %
+    ]
+{hyperref}
+\else
+\DeclareGraphicsExtensions{.eps,.ps,.png,.gif}
+\RequirePackage[
+%    dvipdfm,  %
+    CJKbookmarks       = true, %
+    pdftitle           = {Document Created On LaTex Template Designed By X. Bao},
+    pdfauthor          = {Xiaomin Bao},
+    pdfsubject         = {Document Created On LaTex Template Designed By X. Bao},
+    pdfkeywords        = {LaTex Template Designed By X. Bao},
+    pdfdisplaydoctitle = true,
+    bookmarksnumbered  = true, %
+    bookmarksopen      = true, %
+    colorlinks         = true, % 注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+    linkcolor          = blue, %
+    citecolor          = blue, %
+    pagecolor          = blue
+    ]
+{hyperref}
+\fi
+
+\RequirePackage{algorithm,algorithmic}
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+\let\@afterindentfalse\@afterindenttrue\@afterindenttrue
+
+% style: page layout
+% 一级标题靠左对齐，小4号字体并加粗
+\CTEXsetup[format+={\flushleft\heiti\zihao{-4}}]{section}
+%一级标题的序号后加.
+\CTEXsetup[name={,.}]{section}
+%\CTEXsetup[name={第\ ,\ 章}]{section}
+% 二级、三级标题缩进，小4号字体
+\CTEXsetup[format+={\large\zihao{-4}}]{subsection}
+\CTEXsetup[format+={\large\zihao{-4}}]{subsubsection}
+\CTEXoptions[today=small]
+\CTEXsetup[name={附录~}]{appendix}
+
+\setlength{\topmargin}       {-1cm}
+\setlength{\mathsurround}{2pt} % 在非独立数学表达式前后加入 2pt 的空格
+\renewcommand\normalsize{%
+\@setfontsize\normalsize\@xpt\@xiipt
+\abovedisplayskip 6\p@ \@plus4\p@ \@minus5\p@
+\abovedisplayshortskip \z@ \@plus6\p@
+\belowdisplayshortskip 6\p@ \@plus6\p@ \@minus3\p@
+\belowdisplayskip \abovedisplayskip
+\let\@listi\@listI}
+
+%define the table of contents
+\renewcommand\tableofcontents{%
+    \centerline{\normalfont\Large\bfseries\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \vskip 5ex%
+    \@starttoc{toc}%
+    }
+
+% style: float counter
+\setcounter{totalnumber}{6}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+%很多人发现缺省的浮动参数过于严格了。下面的命令
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+%将浮动参数重新设置为更宽松的值。---选自《Using Import graphics in LATEX2e》
+%\let\endkeywords\relax
+% style: table & figure caption font size and face
+\CTEXoptions[contentsname = {目\quad 录}]
+%\renewcommand\l@section {\@dottedtocline{1}{1.5em}{1.3em}}
+%\renewcommand\l@subsection {\@dottedtocline{2}{3.8em}{1.3em}}
+%\renewcommand\l@subsubsection{\@dottedtocline{3}{6.0em}{1.3em}}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+%
+%图表标题的分隔符设置为空格
+\CTEXoptions[captiondelimiter={. }]
+%\captionsetup[figure]{labelsep=space}
+%\captionsetup[table]{labelsep=space}
+% style: table vertical merged cells
+\newcommand{\thline}{\hline\par\hline\par\hline}
+%\newcommand{\citeu}[1]{$^{\mbox{\protect\scriptsize{\rm\cite{#1}}}}$}
+\newcommand{\citeu}[1]{\hspace{-.1cm}$^{\mbox{\protect\scriptsize{\rm\cite{#1}}}}$}
+%\makeatletter
+%\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+%\makeatother
+% style: figure include path
+\graphicspath{{./}{./img/}{./fig/}{./image/}{./figure/}{./picture/}}
+
+%define the the bibliography
+%\newtheorem{Theorem}{Theorem}[section]%
+%\newtheorem{Lemma}[Theorem]{Lemma}%
+%\newtheorem{Corollary}[Theorem]{Corollary}%
+%\newtheorem{Proposition}[Theorem]{Proposition}%
+%\newtheorem{Definition}[Theorem]{Definition}%
+%\newtheorem{Example}[Theorem]{Example}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{hours}\newcounter{minutes}
+\newcommand{\Printtime}{\setcounter{hours}{\time/60}%
+\setcounter{minutes}{\time-\value{hours}*60}%
+\ifthenelse{\value{hours}<10}{0}{}%若小时数小于10，则在前面补0。
+\thehours:%
+\ifthenelse{\value{minutes}<10}{0}{}%若分数小于10，则在前面补0。
+\theminutes
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{定理\hspace{0.1mm}}           %
+\newtheorem{lemma}{引理\hspace{0.1mm}}             %
+\newtheorem{exercise}{练习\hspace{0.1mm}}          %
+\def\theproblem{\thesection.\arabic{exercise}}     %
+\newtheorem{definition}{{\bf 定义}}                %
+\def\proofname{\bf 证明}                           %
+%\def\CTEX@appendixname{}
+%\renewcommand{\appendices}{\heiti 附录}
+%\def\abstractname{\heiti 摘要}                     %
+%\newcommand{\zhaiyao}{\heiti 摘要：}               %
+\newtheorem{proposition}{命题\hspace{0.1mm}}       %
+\newtheorem{property}{性质\hspace{0.1mm}}          %
+\newtheorem{example}{例\hspace{0.1mm}}             %
+\newtheorem{corollary}[theorem]{推论\hspace{0.1mm}}%
+\theoremstyle{definition}\newtheorem*{solution}{解}%
+\theoremstyle{definition}
+\newtheorem*{note}{\heiti 注\hspace{0.1mm}}      %
+%\theoremstyle{definition}\newtheorem*{fenxi}{\heiti 分析\hspace{0.1mm}}   %
+\renewcommand\theenumi{(\arabic{enumi})}
+\renewcommand\theenumii{\alph{enumii}}
+%\def\labelenumi{\rm(\arabic{enumi})}               %
+%\def\theenumi{\rm(\arabic{enumi})}                 %
+%\def\labelenumii{\rm(\alph{enumii})}               %
+%\def\theenumii{\rm(\alph{enumii})}
+
+% style: list typesetting
+\definecolor{grey}{rgb}{0.91,0.91,0.91}
+\definecolor{darkgreen}{rgb}{0,0.3,0}
+\definecolor{darkblue}{rgb}{0,0,0.3}
+\def\lstbasicfont{\fontfamily{pcr}\selectfont\footnotesize}
+\lstset{
+    breaklines,                                 % 自动将长的代码行换行排版
+    extendedchars=false,                        % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+    %backgroundcolor=\color[rgb]{0.96,0.96,0.96},% 背景颜色
+    keywordstyle=\color{DodgerBlue}\bfseries,     % 关键字颜色
+    identifierstyle=\color{black},              % 普通标识符颜色
+    commentstyle=\color[rgb]{0,0.6,0},          % 注释颜色
+    stringstyle=\color[rgb]{0.58,0,0.82},       % 字符串颜色
+    showstringspaces=false,                     % 不显示字符串内的空格
+    %numbers=left,                               % 显示行号
+    %numberstyle=\tiny\menlo,                    % 设置数字字体
+    basicstyle={\small\ttfamily},                % 设置基本字体
+    captionpos=t,                               % title在上方(在bottom即为b)
+    frame=lines,                               % 设置代码框形式
+    %rulecolor=\color[rgb]{0.7,0.7,0.8},         % 设置代码框颜色
+	tabsize=4,
+}
+\lstloadlanguages{C,C++,Java,Matlab,Mathematica,R}
+% style: SWU required header
+\setcounter{page}{1}
+\renewcommand{\headrulewidth}{0pt}
+%\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+%\cfoot{\zihao{-5}\small 第\;\thepage\;页\;共\;\pageref*{endofThesis}\;页}
+\endinput

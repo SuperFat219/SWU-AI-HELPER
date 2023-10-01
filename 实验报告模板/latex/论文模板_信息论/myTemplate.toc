@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1.}引言}{1}{section.1}%
+\contentsline {section}{\numberline {2.}信源编码基础}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}信源编码的概念}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}无失真信源编码定理}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}定长信源编码定理}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}变长信源编码定理}{2}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}限失真信源编码定理}{2}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}失真函数的定义}{2}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}限失真信源编码定理}{3}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3.}常用的信源编码方法}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}哈夫曼编码}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}编码过程}{3}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}哈夫曼编码示例}{4}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}特点和应用}{4}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}香农编码}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}编码过程}{4}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}香农编码示例}{4}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}费诺编码}{5}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}编码过程}{5}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}费诺编码举例}{5}{subsubsection.3.3.2}%
+\contentsline {section}{\numberline {4.}总结与展望}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}结论}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}展望未来的发展方向和研究挑战}{5}{subsection.4.2}%
+\contentsline {section}{参考文献}{5}{subsection.4.2}%

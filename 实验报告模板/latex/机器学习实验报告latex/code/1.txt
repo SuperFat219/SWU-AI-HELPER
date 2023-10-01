@@ -1,0 +1,82 @@
+! pip install factor_analyzer
+import pandas as pd
+import numpy as np
+from pandas import DataFrame,Series
+from factor_analyzer import FactorAnalyzer
+import numpy.linalg as nlg
+from math import sqrt
+from numpy import eye, asarray, dot, sum, diag #导入eye,asarray,dot,sum,diag 函数
+from numpy.linalg import svd #导入奇异值分解函数
+import warnings
+warnings.filterwarnings("ignore")
+
+dat=pd.read_csv('C:\\Users\\14576\\Desktop\\data.csv')
+data=dat.iloc[:,1:19]
+C=data.corr()
+def kmo(dataset_corr):
+    corr_inv = np.linalg.inv(dataset_corr)
+    nrow_inv_corr, ncol_inv_corr = dataset_corr.shape
+    A = np.ones((nrow_inv_corr, ncol_inv_corr))
+    for i in range(0, nrow_inv_corr, 1):
+        for j in range(i, ncol_inv_corr, 1):
+            A[i, j] = -(corr_inv[i, j]) / (math.sqrt(corr_inv[i, i] * corr_inv[j, j]))
+            A[j, i] = A[i, j]
+    dataset_corr = np.asarray(dataset_corr)
+    kmo_num = np.sum(np.square(dataset_corr)) - np.sum(np.square(np.diagonal(A)))
+    kmo_denom = kmo_num + np.sum(np.square(A)) - np.sum(np.square(np.diagonal(A)))
+    kmo_value = kmo_num / kmo_denom
+    return kmo_value
+print("\nKMO测度:", kmo(C))
+# 巴特利特球形检验
+df2_corr1 = C.values
+print(df2_corr1.shape)
+print("\n巴特利特球形检验:", bartlett(df2_corr1[0], df2_corr1[1], df2_corr1[2], df2_corr1[3], df2_corr1[4],
+                              df2_corr1[5], df2_corr1[6], df2_corr1[7], df2_corr1[8], df2_corr1[9],
+                              df2_corr1[10], df2_corr1[11], df2_corr1[12],df2_corr1[13],df2_corr1[14],
+                              df2_corr1[15],df2_corr1[16],df2_corr1[17]))
+eig_value,eig_vector=nlg.eig(C) #计算特征值和特征向量
+eig=pd.DataFrame() #利用变量名和特征值建立一个数据框
+eig['names']=data.columns#列名
+eig['eig_value']=eig_value#特征值
+
+for k in range(1,17): #确定公共因子个数
+    if eig['eig_value'][:k].sum()/eig['eig_value'].sum()>=0.9: #如果解释度达到80%, 结束循环
+        print(k)
+        break
+print(eig['eig_value'][:5].sum()/eig['eig_value'].sum())#方差解释率
+
+col0=list(sqrt(eig_value[0])*eig_vector[:,0]) #因子载荷矩阵第1列
+col1=list(sqrt(eig_value[1])*eig_vector[:,1]) #因子载荷矩阵第2列
+col2=list(sqrt(eig_value[2])*eig_vector[:,2]) #因子载荷矩阵第3列
+col3=list(sqrt(eig_value[3])*eig_vector[:,3]) #因子载荷矩阵第4列
+col4=list(sqrt(eig_value[4])*eig_vector[:,4]) #因子载荷矩阵第5列
+A=pd.DataFrame([col0,col1,col2,col3,col4]).T #构造因子载荷矩阵A
+A.columns=['factor1','factor2','factor3','factor4','factor5'] #因子载荷矩阵A的公共因子
+h=np.zeros(18) #变量共同度，反映变量对共同因子的依赖程度，越接近1，说明公共因子解释程度越高，因子分析效果越好
+D=np.mat(np.eye(18))#特殊因子方差，因子的方差贡献度 ，反映公共因子对变量的贡献，衡量公共因子的相对重要性
+A=np.mat(A) #将因子载荷阵A矩阵化
+for i in range(18):
+    a=A[i,:]*A[i,:].T #行平方和
+    h[i]=a[0,0]  #计算变量X共同度,描述全部公共因子F对变量X_i的总方差所做的贡献，及变量X_i方差中能够被全体因子解释的部分
+    D[i,i]=1-a[0,0] #因为自变量矩阵已经标准化后的方差为1，即Var(X_i)=第i个共同度h_i + 第i个特殊因子方差
+def varimax(Phi, gamma = 1.0, q =18, tol = 1e-6): #定义方差最大旋转函数
+    p,k = Phi.shape #给出矩阵Phi的总行数，总列数
+    R = eye(k) #给定一个k*k的单位矩阵
+    d=0
+    for i in range(q):
+        d_old = d
+        Lambda = dot(Phi, R)#矩阵乘法
+        u,s,vh = svd(dot(Phi.T,asarray(Lambda)**3 - (gamma/p) * dot(Lambda, diag(diag(dot(Lambda.T,Lambda)))))) #奇异值分解svd
+        R = dot(u,vh)#构造正交矩阵R
+        d = sum(s)#奇异值求和
+        
+    if d_old!=0 and d/d_old:
+        return dot(Phi, R)#返回旋转矩阵Phi*R
+
+rotation_mat=varimax(A)#调用方差最大旋转函数
+rotation_mat=pd.DataFrame(rotation_mat)#数据框化
+data=np.mat(data) #矩阵化处理
+
+factor_score=(data).dot(A) #计算因子得分
+factor_score=pd.DataFrame(factor_score)#数据框化
+factor_score.columns=['factorA','factorB','factorC','factorD','factorE'] #对因子变量进行命名

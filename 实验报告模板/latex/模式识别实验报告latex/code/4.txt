@@ -1,0 +1,72 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+import math
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
+from sklearn.metrics import accuracy_score, recall_score
+
+#处理数据
+f=open(r'D:\desktop\segment.dat',encoding='utf-8')
+sentimentlist = []
+count=0
+for line in f:
+    #print(line)
+    if (count<=23):
+        count+=1
+        continue
+    s = line.strip().split(', ')
+    sentimentlist.append(s)
+    count+=1
+f.close()
+data=pd.DataFrame(sentimentlist,columns=['Region-centroid-col','Region-centroid-row','Region-pixel-count','Short-line-density-5',
+                                            'Short-line-density-2','Vedge-mean','Vegde-sd','Hedge-mean','Hedge-sd',
+                                            'Intensity-mean','Rawred-mean','Rawblue-mean','Rawgreen-mean','Exred-mean',
+                                            'Exblue-mean','Exgreen-mean','Value-mean','Saturatoin-mean','Hue-mean','Class'])
+Class=data[['Class']]  #提取标签
+del data['Class']
+del data['Region-pixel-count']
+Class_num=Class.copy(deep=True) #将标签数值化
+uniq_list=list(np.unique(Class))
+for i in range(len(Class)):
+    for j in range(7):
+        if Class_num.iloc[i].item() == uniq_list[j]:
+            Class_num.loc[i]=j
+Class_num.head()
+Class_num=np.array(Class_num,dtype=np.intc)
+Class_num=pd.DataFrame(Class_num,columns=['Class'])
+data=np.array(data,dtype=np.float)
+data=pd.DataFrame(data,columns=['Region-centroid-col','Region-centroid-row','Short-line-density-5',
+                                            'Short-line-density-2','Vedge-mean','Vegde-sd','Hedge-mean','Hedge-sd',
+                                            'Intensity-mean','Rawred-mean','Rawblue-mean','Rawgreen-mean','Exred-mean',
+                                            'Exblue-mean','Exgreen-mean','Value-mean','Saturatoin-mean','Hue-mean'])
+#数据离散化
+df=pd.qcut(data['Vegde-sd'],4,labels=np.linspace(1,4,4))
+data['Vegde-sd']=df
+df=pd.qcut(data['Region-centroid-row'],9,labels=np.linspace(1,9,9))
+data['Region-centroid-row']=df
+df=pd.qcut(data['Region-centroid-col'],9,labels=np.linspace(1,9,9))
+data['Region-centroid-col']=df
+df=pd.qcut(data['Value-mean'],15,labels=np.linspace(1,15,15))
+data['Value-mean']=df
+df=pd.qcut(data['Intensity-mean'],16,labels=np.linspace(1,16,16))
+data['Intensity-mean']=df
+df=pd.qcut(data['Rawred-mean'],14,labels=np.linspace(1,14,14))
+data['Rawred-mean']=df
+df=pd.qcut(data['Rawgreen-mean'],16,labels=np.linspace(1,16,16))
+data['Rawgreen-mean']=df
+df=pd.qcut(data['Rawblue-mean'],14,labels=np.linspace(1,14,14))
+data['Rawblue-mean']=df
+# 训练集和测试集
+data=StandardScaler().fit(data).transform(data)
+x_train, x_test, y_train, y_test = train_test_split(np.array(data), np.ravel(np.array(Class_num)), test_size=0.3,random_state=42)
+# 训练
+log_model = LogisticRegressionCV(multi_class="multinomial", solver="saga", max_iter=3000,penalty='elasticnet',l1_ratios=[.01, .1, .5, .9, .99])
+log_model.fit(x_train,y_train)
+#准确率和召回率
+pred_test = log_model.predict(x_test)
+acu = accuracy_score(y_test, pred_test)  # 准确率
+recall = recall_score(y_test, pred_test, average="macro")  # 召回率
+print(acu,recall)

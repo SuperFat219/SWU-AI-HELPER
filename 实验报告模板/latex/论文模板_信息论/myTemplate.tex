@@ -1,0 +1,60 @@
+\documentclass[a4paper]{ctexart}
+%======================Include Packages========================
+\usepackage{preample/SWUthesis}
+\usepackage{graphicx}
+\usepackage{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeindex%生成索引
+\newcommand{\university}{西南大学}                             
+\newcommand{\school}{人工智能学院}                       
+\newcommand{\city}{重庆 400715}                          
+\newcommand{\biaoti}{信息论中的信源编码方法研究与比较分析}
+\newcommand{\cobiaoti}{}                  
+\newcommand{\enbiaoti}{A Brief Review of Nighttime Image Dehazing Methods Based on Deep Learning} % 英文论文题目
+\newcommand{\nianji}  {2020 级}
+\newcommand{\zhuanye}{智能科学与技术}
+\newcommand{\kecheng}{信息论}
+\newcommand{\minzi}{{\CJKfamily{kai}严中圣}}
+\newcommand{\englishname}{Zhong Yu}
+\newcommand{\jiaoshi}{\CJKfamily{kai}王文东}
+\newcommand{\xuehao}{\CJKfamily{kai}\;\;\;\;\;\;\;222020335220177\;\;\;\;\;\;\;}
+\newcommand{\dayinriqi}{\CJKfamily{kai}\today}% 打印日期
+%===============================================================
+% 若修改过程中某个文件不需修改，则将\includeonly中这个文件名注释掉可以加快编译速度。
+% 请用PDFLATEX编译，直接生成PDF文件。也可用 LATEX 编译，但速度可能会非常慢，有时甚至可能会出错。
+%===============================================================
+\includeonly{tables/coverpage,fulu}
+%======================
+\makeindex
+\begin{document}
+\begin{titlepage}
+\include{tables/coverpage}
+\end{titlepage}
+%====================生成目录===================================
+%%%%%%%%%%%%%%%%%%%%%%
+%\pagenumbering{roman}%
+%\thispagestyle{plain}%
+%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\thispagestyle{plain}
+\newpage
+%==========================摘要===================================
+%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic} %
+\setcounter{page}{1}   %
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{multicols}{2} 
+%	\input{abstract.tex}
+%\end{multicols}
+%=======================正文开始==================================
+\input{body}
+%=======================参考文献=================================%
+\input{bibfile}
+%=========================附录===================================%
+%\begin{appendix}
+%\include{fulu}
+%\end{appendix}
+\setcounter{page}{\thepage - 1}
+
+\end{document}
+
