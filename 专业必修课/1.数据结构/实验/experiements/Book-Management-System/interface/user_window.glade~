@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="user_window">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">1080</property>
+            <property name="height_request">720</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background2.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">720</property>
+            <property name="height_request">125</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">欢迎使用图书信息管理系统</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="4.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">203</property>
+            <property name="y">98</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="search_button">
+            <property name="label" translatable="yes">查找图书信息</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">318</property>
+            <property name="y">380</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="borrow_button">
+            <property name="label" translatable="yes">借阅图书</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">615</property>
+            <property name="y">260</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="view_button">
+            <property name="label" translatable="yes">查看馆藏信息</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">320</property>
+            <property name="y">260</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_book_button">
+            <property name="label" translatable="yes">归还图书</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">615</property>
+            <property name="y">380</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="exit_button">
+            <property name="label" translatable="yes">退出</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">615</property>
+            <property name="y">500</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="view_person_button">
+            <property name="label" translatable="yes">查看个人信息</property>
+            <property name="width_request">185</property>
+            <property name="height_request">70</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">318</property>
+            <property name="y">500</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

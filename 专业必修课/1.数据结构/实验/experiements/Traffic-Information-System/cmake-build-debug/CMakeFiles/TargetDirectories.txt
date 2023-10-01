@@ -1,0 +1,3 @@
+/home/god/Projects/Traffic-Information-System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/god/Projects/Traffic-Information-System/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/god/Projects/Traffic-Information-System/cmake-build-debug/CMakeFiles/traffic_information_system.dir

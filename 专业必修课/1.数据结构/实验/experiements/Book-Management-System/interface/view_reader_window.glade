@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="view_readers_window">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">1080</property>
+            <property name="height_request">720</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background2.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">720</property>
+            <property name="height_request">125</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">读者信息列表</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="4.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">208</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_button">
+            <property name="label" translatable="yes">返回</property>
+            <property name="width_request">127</property>
+            <property name="height_request">57</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">905</property>
+            <property name="y">627</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <property name="width_request">955</property>
+            <property name="height_request">410</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="x">49</property>
+            <property name="y">181</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="import_button">
+            <property name="label" translatable="yes">批量导入</property>
+            <property name="width_request">127</property>
+            <property name="height_request">57</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">442</property>
+            <property name="y">628</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="delete_button">
+            <property name="label" translatable="yes">删除</property>
+            <property name="width_request">127</property>
+            <property name="height_request">57</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">598</property>
+            <property name="y">627</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="delete_all_button">
+            <property name="label" translatable="yes">删除全部</property>
+            <property name="width_request">127</property>
+            <property name="height_request">57</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">754</property>
+            <property name="y">627</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

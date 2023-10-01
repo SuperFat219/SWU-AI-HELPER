@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="user_borrow_window">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">1080</property>
+            <property name="height_request">720</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background2.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">360</property>
+            <property name="height_request">88</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">借阅图书</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="4.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">360</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="id_entry">
+            <property name="width_request">230</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(图书ID)</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">258</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="name_entry">
+            <property name="width_request">244</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(请输入您所要借阅的图书名称)</property>
+          </object>
+          <packing>
+            <property name="x">560</property>
+            <property name="y">258</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="author_entry">
+            <property name="width_request">173</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(图书作者)</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">464</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="pages_entry">
+            <property name="width_request">168</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(图书总页数)</property>
+          </object>
+          <packing>
+            <property name="x">560</property>
+            <property name="y">361</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="pub_entry">
+            <property name="width_request">221</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(图书出版社)</property>
+          </object>
+          <packing>
+            <property name="x">560</property>
+            <property name="y">464</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书ID：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">236</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">110</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书名称：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">454</property>
+            <property name="y">240</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">110</property>
+            <property name="height_request">55</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书类别：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">97</property>
+            <property name="y">352</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">110</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书作者：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">444</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">110</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">总页数：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">455</property>
+            <property name="y">336</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">出版社：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">462</property>
+            <property name="y">444</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="borrow_button">
+            <property name="label" translatable="yes">借阅(B)</property>
+            <property name="width_request">151</property>
+            <property name="height_request">63</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">848</property>
+            <property name="y">405</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_button">
+            <property name="label" translatable="yes">返回(R)</property>
+            <property name="width_request">151</property>
+            <property name="height_request">63</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">848</property>
+            <property name="y">517</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="type_entry">
+            <property name="width_request">230</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(图书类别)</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">361</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">145</property>
+            <property name="height_request">53</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书状态：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="2"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">297</property>
+            <property name="y">574</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">174</property>
+            <property name="height_request">54</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">馆藏无此书目</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="2"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">455</property>
+            <property name="y">574</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

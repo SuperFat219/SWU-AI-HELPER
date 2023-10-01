@@ -1,0 +1,2 @@
+Prepare for a career in tech by joining GitHub Global Campus. Global Campus will help you get the practical industry knowledge you need by giving you access to industry tools, events, learning resources and a growing student community.
+Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.

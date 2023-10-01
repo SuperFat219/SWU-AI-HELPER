@@ -1,0 +1,4 @@
+/snap/clion/177/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/177/bin/ninja/linux/ninja -G Ninja /home/god/Projects/Traffic-Information-System
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/god/Projects/Traffic-Information-System/cmake-build-debug

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="borrow_window">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">1080</property>
+            <property name="height_request">720</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background2.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">720</property>
+            <property name="height_request">88</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">图书借阅信息</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="4.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">195</property>
+            <property name="y">63</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <property name="width_request">959</property>
+            <property name="height_request">416</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="x">68</property>
+            <property name="y">218</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_button">
+            <property name="label" translatable="yes">返回(R)</property>
+            <property name="width_request">133</property>
+            <property name="height_request">59</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">890</property>
+            <property name="y">650</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="name_entry">
+            <property name="width_request">209</property>
+            <property name="height_request">44</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(输入您要查询的借阅人姓名)</property>
+          </object>
+          <packing>
+            <property name="x">517</property>
+            <property name="y">157</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">102</property>
+            <property name="height_request">54</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">借阅人姓名：</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.3"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">409</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

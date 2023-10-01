@@ -1,0 +1,261 @@
+% -------------------------允许算法跨页-------------
+\makeatletter
+\newenvironment{breakablealgorithm}
+{% \begin{breakablealgorithm}
+	\begin{center}
+		\refstepcounter{algorithm}% New algorithm
+		\hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+		\renewcommand{\caption}[2][\relax]{% Make a new \caption
+			{\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+			\ifx\relax##1\relax % #1 is \relax
+			\addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+			\else % #1 is not \relax
+			\addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+			\fi
+			\kern2pt\hrule\kern2pt
+		}
+	}{% \end{breakablealgorithm}
+		\kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+	\end{center}
+}
+\makeatother
+
+%----------------------------------------------------
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage{fontspec}
+\usepackage{xeCJK}%文字体的设置
+%\newcommand{\canger}{\CJKfontspec{TsangerJinKai03}}
+%\setmainfont{TsangerJinKai03} %设置全文字体
+%\setsansfont{TsangerJinKai03}
+%\setsansfont{TsangerJinKai03} 
+%\defaultfontfeatures{Mapping=tex-text}
+%\setCJKmainfont{TsangerJinKai03}
+%\setCJKsansfont{TsangerJinKai03}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{tcolorbox}
+\usepackage{float}   %{H}
+\usepackage{booktabs}  %\toprule[1.5pt]
+\usepackage[titletoc]{appendix}
+\usepackage{algorithm}  
+\usepackage{algorithmic}  
+%\usepackage{algorithmicx}
+%===================%插入代码需要的控制
+\usepackage{listings}
+\usepackage{xcolor}
+\setmonofont{Consolas}%字体
+\lstset{%
+	numbers=left,
+	numberstyle=\tt\tiny,%
+	showstringspaces=false,
+	showspaces=false,%
+	tabsize=4,%
+	frame=lines,%
+	basicstyle=\tt\small,%
+	keywordstyle=\color{ blue!70}\bfseries,%
+	identifierstyle=,%
+	commentstyle=\color{red!50!green!50!blue!50},%\itshape,%
+	stringstyle=\color{black},%
+	breaklines=true
+}
+%===================%
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newtheorem*{solution}{解}
+\newtheorem{cor}{推论}
+\newtheorem{e}{习题}
+\title{算法设计与分析(5.20作业)}
+\author{智科三班 \quad 严中圣 \quad 222020335220177}
+\date{\today}
+\begin{document}
+\maketitle
+\pagestyle{plain}%设置页码
+%\noindent\rule{\textwidth}{1pt} %加横线
+%============================================================================
+\newpage
+\begin{breakablealgorithm}
+	\caption{$0-1 \; Knapsack problem\; ——\; Brute \; Force $} 
+	\begin{algorithmic}[1]
+		\REQUIRE $n,c,V[n],W[n]$
+		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+		\STATE $Initialize$ $CurrentValue,CurrentVolume$ //当前价值，当前消耗容量
+		\STATE $MaxValue \gets$ $Force(1)$
+		\RETURN $X[n],MaxValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\begin{breakablealgorithm}
+	\caption{$Force(i)$} 
+	\begin{algorithmic}[1]
+%		\REQUIRE $n,c,V[n],W[n]$
+%		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+%		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+%		\STATE $Initialize$ $CurrentValue,CurrentVolumn$ //当前价值，当前消耗容量
+		\IF {$i>n$}
+			\IF {$MaxValue < CurrentValue \quad and \quad  CurrentVolumn \leq c$}
+				\FOR {$k \gets 1 \; \textbf{to} \; n$}
+					\STATE $X[k] \gets S[k]$ //存储最优路径
+				\ENDFOR
+				\STATE $MaxValue \gets CurrentValue$
+			\ENDIF
+			\RETURN $MaxValue$
+		\ENDIF
+		\STATE $CurrentVolume \gets$ $CurrentVolume + V[i]$
+		\STATE $CurrentValue \gets$ $CurrentValue + W[i]$
+		\STATE $S[i]=1$
+		\STATE $Force(i+1)$
+		\STATE $CurrentVolume \gets$ $CurrentVolume - V[i]$
+		\STATE $CurrentValue \gets$ $CurrentValue - W[i]$
+		\STATE $S[i] \gets 0$
+		\STATE $Force(i+1)$
+		\RETURN $MaxValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+
+\newpage
+\begin{breakablealgorithm}
+	\caption{$0-1 \; Knapsack problem\; ——\; Dynamic \; processing$} 
+	\begin{algorithmic}[1]
+		\REQUIRE $n,c,V[n],W[n]$
+		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		\STATE $Initialize$ $X[n]$ //最终存储状态，当前存储状态
+		\STATE $Initialize$ $V[n+1][c]$ //dp数组，初始化数组为0
+		\FOR {$k \gets 1 \; \textbf{to} \; c$}
+			\IF {$k>V[1]$}
+				\STATE $V[1][k]\gets W[1]$
+			\ENDIF
+		\ENDFOR
+		\FOR {$i \gets 2 \; \textbf{to} \; n$}
+			\FOR{$j \gets 1 \; \textbf{to} \; c$}
+				\IF {$j<V[i-1]$}
+					\STATE $V[i][j] \gets  V[i-1][j]$
+				\ELSE 
+					\STATE $V[i][j] \gets \max(V[i-1][j],V[i-1][j-V[i-1]]+W[i-1])$
+				\ENDIF
+			\ENDFOR
+		\ENDFOR
+		\STATE $j \gets c$
+		\FOR {$i \gets n \; \textbf{to} \; 1$}
+			\IF {$i == 1$}
+				\IF {$V[i][j]>0$}
+					\STATE $X[1] \gets 1$
+				\ELSE
+					\STATE $X[1] \gets 0$
+				\ENDIF
+			\ENDIF
+			\IF {$V[i][j] > V[i-1][j]$}
+				\STATE $X[i] \gets 1$
+				\STATE $j \gets j - V[i]$
+			\ELSE
+				\STATE $X[i] \gets 0$
+			\ENDIF
+		\ENDFOR
+		\RETURN $X[n],V[n][c]$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\newpage 
+\begin{breakablealgorithm}
+	\caption{$0-1 \; Knapsack problem\; ——\; BackTracking \; Method $} 
+	\begin{algorithmic}[1]
+		\REQUIRE $n,c,V[n],W[n]$
+		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+		\STATE $Initialize$ $CurrentValue,CurrentVolume$ //当前价值，当前消耗容量
+		\STATE $MaxValue \gets$ $BackTrack(1)$
+		\RETURN $X[n],MaxValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\begin{breakablealgorithm}
+	\caption{$BackTrack(i)$} 
+	\begin{algorithmic}[1]
+		%		\REQUIRE $n,c,V[n],W[n]$
+		%		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		%		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+		%		\STATE $Initialize$ $CurrentValue,CurrentVolumn$ //当前价值，当前消耗容量
+		\IF {$i>n$}
+			\IF {$MaxValue < CurrentValue$}
+				\FOR {$k \gets 1 \; \textbf{to} \; n$}
+					\STATE $X[k] \gets S[k]$ //存储最优路径
+				\ENDFOR
+				\STATE $MaxValue \gets CurrentValue$
+			\ENDIF
+			\RETURN $MaxValue$
+		\ENDIF
+		\IF {$CurrentVolume + V[i] \leq c$}
+			\STATE $CurrentVolume \gets$ $CurrentVolume + V[i]$
+			\STATE $CurrentValue \gets$ $CurrentValue + W[i]$
+			\STATE $S[i]\gets 1$
+			\STATE $BackTrack(i+1)$
+			\STATE $CurrentVolume \gets$ $CurrentVolume - V[i]$
+			\STATE $CurrentValue \gets$ $CurrentValue - W[i]$
+		\ENDIF
+		\STATE $S[i]\gets 0$
+		\STATE $BackTrack(i+1)$
+		\RETURN $MaxValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+
+\newpage
+\begin{breakablealgorithm}
+	\caption{$0-1 \; Knapsack problem\; ——\; Branch \;and \;Bound $} 
+	\begin{algorithmic}[1]
+		\REQUIRE $n,c,V[n],W[n]$
+		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+		\STATE $Initialize$ $CurrentValue,CurrentVolume$ //当前价值，当前消耗容量
+		\STATE $MaxValue \gets$ $BackTrack(1)$
+		\RETURN $X[n],MaxValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\begin{breakablealgorithm}
+	\caption{$BackTrack(i)$} 
+	\begin{algorithmic}[1]
+		%		\REQUIRE $n,c,V[n],W[n]$
+		%		\ENSURE $X[n]$ 最终存储状态;$MaxValue$ 最大价值
+		%		\STATE $Initialize$ $X[n],S[n]$ //最终存储状态，当前存储状态
+		%		\STATE $Initialize$ $CurrentValue,CurrentVolumn$ //当前价值，当前消耗容量
+		\IF {$i>n$}
+			\IF {$MaxValue < CurrentValue$}
+				\FOR {$k \gets 1 \; \textbf{to} \; n$}
+					\STATE $X[k] \gets S[k]$ //存储最优路径
+				\ENDFOR
+				\STATE $MaxValue \gets CurrentValue$
+			\ENDIF
+			\RETURN
+		\ENDIF
+		\IF {$CurrentVolume + V[i] \leq c$}
+			\STATE $CurrentVolume \gets$ $CurrentVolume + V[i]$
+			\STATE $CurrentValue \gets$ $CurrentValue + W[i]$
+			\STATE $BackTrack(i+1)$
+			\STATE $CurrentVolume \gets$ $CurrentVolume - V[i]$
+			\STATE $CurrentValue \gets$ $CurrentValue - W[i]$
+		\ENDIF
+		\IF {$Bound(i+1) > MaxValue$}
+			\STATE $S[i]\gets 0$
+			\STATE $BackTrack(i+1)$
+		\ENDIF
+	\end{algorithmic}
+\end{breakablealgorithm}
+\begin{breakablealgorithm}
+	\caption{$Bound(i)$} 
+	\begin{algorithmic}[1]
+		\STATE $Initialize$ $RemainValue$ //剩余最大价值
+		\WHILE {$k \leq n$}
+			\STATE $RemainValue \gets RemainValue+W[k]$
+			\STATE $k\gets k+1$
+		\ENDWHILE
+		\RETURN $RemainValue+CurrentValue$
+	\end{algorithmic}
+\end{breakablealgorithm}
+\end{document}

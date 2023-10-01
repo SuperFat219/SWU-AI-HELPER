@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="plane_window">
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">1024</property>
+            <property name="height_request">683</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background2.jpg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">751</property>
+            <property name="height_request">85</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">欢迎使用交通咨询系统</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="3.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">164</property>
+            <property name="y">58</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_button">
+            <property name="label" translatable="yes">返回</property>
+            <property name="width_request">126</property>
+            <property name="height_request">56</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.85098039215686272</property>
+          </object>
+          <packing>
+            <property name="x">872</property>
+            <property name="y">607</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="departure_entry">
+            <property name="width_request">220</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(请输入您的出发地)</property>
+          </object>
+          <packing>
+            <property name="x">266</property>
+            <property name="y">165</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="destination_entry">
+            <property name="width_request">220</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(请输入您的目的地)</property>
+          </object>
+          <packing>
+            <property name="x">623</property>
+            <property name="y">165</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">57</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">出发：</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">162</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">67</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">到达：</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">538</property>
+            <property name="y">152</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <property name="width_request">792</property>
+            <property name="height_request">280</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="x">149</property>
+            <property name="y">318</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="time_button">
+            <property name="label" translatable="yes">最短时间</property>
+            <property name="width_request">140</property>
+            <property name="height_request">55</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.85098039215686272</property>
+          </object>
+          <packing>
+            <property name="x">256</property>
+            <property name="y">245</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cost_button">
+            <property name="label" translatable="yes">最低花费</property>
+            <property name="width_request">140</property>
+            <property name="height_request">55</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.85098039215686272</property>
+          </object>
+          <packing>
+            <property name="x">479</property>
+            <property name="y">245</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="road_button">
+            <property name="label" translatable="yes">最短路程</property>
+            <property name="width_request">140</property>
+            <property name="height_request">55</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.85098039215686272</property>
+          </object>
+          <packing>
+            <property name="x">699</property>
+            <property name="y">245</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,9 @@
+{
+    "C_Cpp.errorSquiggles": "Enabled",
+    "files.associations": {
+        "linklist_function.h": "c",
+        "system_functions.h": "c",
+        "common_func.h": "c",
+        "gtk.h": "c"
+    }
+}

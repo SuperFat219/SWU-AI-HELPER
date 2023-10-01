@@ -1,0 +1,5 @@
+<RCC>
+    <qresource lang="&#xa;&#xa;    &lt;RCC>&#xa;&#xa;        &lt;qresourceprefix=&quot;/background&quot;>&#xa;&#xa;            &lt;filealias=&quot;mainlogo&quot;>image.jpeg&lt;/file>&#xa;&#xa;        &lt;/qresource>&#xa;&#xa;    &lt;/RCC>&#xa;" prefix="/new/prefix1">
+        <file>image.jpeg</file>
+    </qresource>
+</RCC>

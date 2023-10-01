@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="main_window">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <property name="gravity">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">666</property>
+            <property name="height_request">425</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">background.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">234</property>
+            <property name="height_request">78</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">欢迎使用！</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="2.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">433</property>
+            <property name="y">89</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">481</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">请选择您所需要使用的功能！</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="2.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">294</property>
+            <property name="y">161</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Exit_system">
+            <property name="label" translatable="yes">退出系统</property>
+            <property name="width_request">208</property>
+            <property name="height_request">69</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.80000000000000004</property>
+          </object>
+          <packing>
+            <property name="x">429</property>
+            <property name="y">510</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="decode_button">
+            <property name="label" translatable="yes">译码</property>
+            <property name="width_request">208</property>
+            <property name="height_request">69</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.80000000000000004</property>
+          </object>
+          <packing>
+            <property name="x">429</property>
+            <property name="y">398</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="encode_button">
+            <property name="label" translatable="yes">编码</property>
+            <property name="width_request">208</property>
+            <property name="height_request">69</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="opacity">0.80000000000000004</property>
+          </object>
+          <packing>
+            <property name="x">429</property>
+            <property name="y">286</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

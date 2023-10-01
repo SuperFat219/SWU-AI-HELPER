@@ -1,0 +1,2 @@
+gcc main.c window_main.c common_func.c linklist_function.c system_functions.c -o main `pkg-config --cflags --libs gtk+-3.0` -g
+

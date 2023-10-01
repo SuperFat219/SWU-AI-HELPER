@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="Enter_window">
+    <property name="width_request">1024</property>
+    <property name="height_request">768</property>
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <property name="gravity">center</property>
+    <property name="has_resize_grip">True</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage" id="background">
+            <property name="width_request">1024</property>
+            <property name="height_request">768</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_right">4</property>
+            <property name="pixbuf">../../图片/background2.png</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Main_label">
+            <property name="name">Main_label</property>
+            <property name="width_request">489</property>
+            <property name="height_request">130</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Huffman编译码器</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="scale" value="3"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">438</property>
+            <property name="y">134</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Enter_button">
+            <property name="label" translatable="yes">进入系统</property>
+            <property name="width_request">194</property>
+            <property name="height_request">74</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">578</property>
+            <property name="y">290</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Exit_button">
+            <property name="label" translatable="yes">退出系统</property>
+            <property name="width_request">194</property>
+            <property name="height_request">74</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">581</property>
+            <property name="y">407</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="About_button">
+            <property name="label" translatable="yes">关于</property>
+            <property name="width_request">194</property>
+            <property name="height_request">74</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">580</property>
+            <property name="y">526</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">130</property>
+            <property name="height_request">74</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes"> 开发人员：yzs 
+    2021.12.4</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.3"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+              <attribute name="gravity" value="auto"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="y">694</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

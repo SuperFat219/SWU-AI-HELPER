@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="System_window">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">通讯录信息管理系统</property>
+    <property name="window_position">center</property>
+    <property name="default_width">1024</property>
+    <property name="default_height">784</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="gravity">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed_vector2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage" id="backgroud2">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../../图片/系统背景.jpg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Welcome">
+            <property name="width_request">1022</property>
+            <property name="height_request">108</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="label" translatable="yes">欢迎使用通讯录信息管理系统！</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="stretch" value="expanded"/>
+              <attribute name="scale" value="3"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">2</property>
+            <property name="y">61</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="prompt">
+            <property name="width_request">446</property>
+            <property name="height_request">49</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">请选择您所需要的服务</property>
+            <attributes>
+              <attribute name="style" value="oblique"/>
+              <attribute name="weight" value="medium"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">296</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="View_all_contact">
+            <property name="label" translatable="yes">1.查看所有联系人</property>
+            <property name="width_request">181</property>
+            <property name="height_request">62</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">284</property>
+            <property name="y">295</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Search_contact">
+            <property name="label" translatable="yes">2.查询联系人信息</property>
+            <property name="width_request">181</property>
+            <property name="height_request">62</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">548</property>
+            <property name="y">295</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Create_new_contact">
+            <property name="label" translatable="yes">3.新建联系人</property>
+            <property name="width_request">181</property>
+            <property name="height_request">62</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">284</property>
+            <property name="y">381</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Import_contact">
+            <property name="label" translatable="yes">4.导入联系人信息</property>
+            <property name="width_request">181</property>
+            <property name="height_request">62</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">549</property>
+            <property name="y">381</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Export_contact">
+            <property name="label" translatable="yes">5.导出联系人信息</property>
+            <property name="width_request">182</property>
+            <property name="height_request">61</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">284</property>
+            <property name="y">471</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Exit_system">
+            <property name="label" translatable="yes">6.退出系统</property>
+            <property name="width_request">181</property>
+            <property name="height_request">61</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">549</property>
+            <property name="y">471</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">143</property>
+            <property name="height_request">54</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">开发人员：yzs
+时间：2021.10.03</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#eeeeeeeeecec"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="y">714</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

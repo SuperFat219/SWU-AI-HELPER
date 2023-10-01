@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="register_window">
+    <property name="name">register_window</property>
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">500</property>
+            <property name="height_request">749</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">../pictures/background3.jpeg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">282</property>
+            <property name="height_request">77</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="opacity">0.80000000000000004</property>
+            <property name="label" translatable="yes">注册用户信息</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold 10"/>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="3.5"/>
+              <attribute name="foreground" value="#555557575353"/>
+              <attribute name="background" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">77</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">  用户名：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#555557575353"/>
+              <attribute name="background" value="#e231efa1f17d"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">70</property>
+            <property name="y">184</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="username_entry">
+            <property name="width_request">281</property>
+            <property name="height_request">48</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(设置您的用户名，由字母和数字组成)</property>
+          </object>
+          <packing>
+            <property name="x">178</property>
+            <property name="y">202</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">58</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">  密码：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#555557575353"/>
+              <attribute name="background" value="#e231efa1f17d"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">80</property>
+            <property name="y">266</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="password_entry">
+            <property name="width_request">281</property>
+            <property name="height_request">48</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_length">16</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">•</property>
+            <property name="placeholder_text" translatable="yes">(长度不大于16位，由字母和数字组成)</property>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">273</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">  确认密码：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#555557575353"/>
+              <attribute name="background" value="#e231efa1f17d"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">49</property>
+            <property name="y">338</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="confirm_password_entry">
+            <property name="width_request">281</property>
+            <property name="height_request">48</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_length">16</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">•</property>
+            <property name="placeholder_text" translatable="yes">(再次输入您的密码)</property>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">354</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">93</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">姓名：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="y">459</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">52</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">性别：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">240</property>
+            <property name="y">475</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Tel：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">2</property>
+            <property name="y">544</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Email：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">237</property>
+            <property name="y">547</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="name_entry">
+            <property name="width_request">170</property>
+            <property name="height_request">43</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(您的姓名)</property>
+          </object>
+          <packing>
+            <property name="x">74</property>
+            <property name="y">479</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">57</property>
+            <property name="height_request">52</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">男</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">318</property>
+            <property name="y">474</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">63</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">女</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.5"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">415</property>
+            <property name="y">477</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSwitch" id="sex_switch">
+            <property name="width_request">50</property>
+            <property name="height_request">28</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">372</property>
+            <property name="y">486</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="tel_entry">
+            <property name="width_request">170</property>
+            <property name="height_request">42</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(您的Tel)</property>
+          </object>
+          <packing>
+            <property name="x">72</property>
+            <property name="y">567</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="email_entry">
+            <property name="width_request">180</property>
+            <property name="height_request">46</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">(您的邮箱)</property>
+          </object>
+          <packing>
+            <property name="x">316</property>
+            <property name="y">567</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="confirm_button">
+            <property name="label" translatable="yes">确认</property>
+            <property name="width_request">105</property>
+            <property name="height_request">49</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">108</property>
+            <property name="y">651</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="return_button">
+            <property name="label" translatable="yes">返回</property>
+            <property name="width_request">101</property>
+            <property name="height_request">52</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">275</property>
+            <property name="y">651</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

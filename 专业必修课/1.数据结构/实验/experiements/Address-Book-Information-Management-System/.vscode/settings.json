@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "system_functions.h": "c",
+        "linklist_function.h": "c"
+    }
+}

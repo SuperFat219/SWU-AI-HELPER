@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/c++/9/tr1"
+            ],
+            "defines": [],
+            "compilerPath": "/home/god/anaconda3/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++98",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

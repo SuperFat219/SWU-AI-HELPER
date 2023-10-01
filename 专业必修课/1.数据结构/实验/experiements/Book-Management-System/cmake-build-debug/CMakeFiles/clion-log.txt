@@ -1,0 +1,13 @@
+/snap/clion/177/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/177/bin/ninja/linux/ninja -G Ninja /home/god/Projects/Book-Management-System
+-- The C compiler identification is GNU 7.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.20
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/god/Projects/Book-Management-System/cmake-build-debug
