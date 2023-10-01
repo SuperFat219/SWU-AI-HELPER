@@ -1,0 +1,9 @@
+\contentsline {section}{摘要}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1.}绪论}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}研究背景及意义}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}国内外研究现状}{2}{subsection.1.2}%
+\contentsline {section}{参考文献}{4}{table.1}%
+\contentsline {section}{\numberline {附录\nobreakspace {}A}时间序列特征分析的R 代码}{6}{appendix.A}%
+\contentsline {section}{\numberline {附录\nobreakspace {}B}时间序列三个模型建立和预测的R 代码}{6}{appendix.B}%
+\contentsline {section}{\numberline {附录\nobreakspace {}C}时间序列模型的单一测试集对比的R 代码}{8}{appendix.C}%
+\contentsline {section}{\numberline {附录\nobreakspace {}D}时间序列前移验证的R 代码}{9}{appendix.D}%

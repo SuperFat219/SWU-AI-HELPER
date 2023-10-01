@@ -1,0 +1,1 @@
+memberSearchIndex = [{"l":"area()","h":"","u":"%3Cinit%3E()"},{"l":"main(String[])","h":"","u":"main(java.lang.String[])"},{"l":"side(double, double, double, double)","h":"","u":"side(double,double,double,double)"}]

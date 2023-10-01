@@ -1,0 +1,19 @@
+<jnlp codebase="file:/C:/book" href="TicTacToe.jnlp">
+  <resources>
+    <java version = "1.6+" />
+    <jar href="TicTacToe.jar" main="true" />
+  </resources>
+
+  <information>
+    <title>TicTacToee</title>
+    <vendor>Y. Daniel Liang</vendor>
+    <offline-allowed />
+  </information>
+
+  <applet-desc 
+    name="TicTacToe"
+    main-class="TicTacToe"
+    width ="300"   
+    height ="300">
+  </applet-desc>
+</jnlp>

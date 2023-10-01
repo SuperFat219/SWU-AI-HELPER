@@ -1,0 +1,10 @@
+clear;clc;
+[t,x]=ode45(@func,[0 30],[1;0.5]);
+subplot(1,2,1);
+plot(t,x(:,1),t,x(:,2),':');
+legend('x(t)','y(t)');
+xlabel('t');
+subplot(1,2,2);
+plot(x(:,1),x(:,2));
+xlabel('x');
+ylabel('y');

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="generalFormatting" name="baseCodeStyle" value="java/Java Standard.codestyle"/>
+  <property category="generalFormatting2" name="blockIndent" value="4"/>
+  <property category="generalFormatting2" name="continuationIndent" value="8"/>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="javaFormatting" name="alignMultilineAssign" value="1"/>
+  <property category="javaFormatting" name="arrayInitDataOnNewLine" value="0"/>
+  <property category="javaFormatting" name="blankLinesAfterClass" value="2"/>
+  <property category="javaFormatting" name="catchOnNewLine" value="0"/>
+  <property category="javaFormatting" name="elseOnNewLine" value="0"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="finallyOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="indentCase" value="0"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;BLANK_LINE;javax;BLANK_LINE;(*)"/>
+  <property category="javaFormatting" name="packageThreshold" value="2"/>
+  <property category="javaFormatting" name="preservedBlankLinesInDecl" value="2"/>
+  <property category="javaFormatting" name="spaceBeforeLparen" value="0"/>
+  <property category="javaFormatting" name="whileOnNewLine" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime" name="ExcludeDefaultForZero" value="1"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore"/>
+  <property category="serverservices" name="single.server.name" value=""/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2005"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="."/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.5.0_03-b07"/>
+  <property category="sys" name="JvmVersion" value="1.5"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="ACME;MySQL;Oracle9i;Tomcat 4.1 Servlet"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="."/>
+  <property category="sys" name="SourcePath" value=".;test"/>
+  <property category="sys" name="SourceVersion" value="1.5"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <file path="BarChart.java"/>
+  <file path="BinarySearch.java"/>
+  <file path="CalendarPanel.java"/>
+  <file path="CircleController.java"/>
+  <file path="CircleModel.java"/>
+  <file path="CircleView.java"/>
+  <file path="ComputeTax.java"/>
+  <file path="DescriptionPanel.java"/>
+  <file path="Deviation.java"/>
+  <file path="Exercise10_1.java"/>
+  <file path="Exercise10_10.java"/>
+  <file path="Exercise10_2.java"/>
+  <file path="Exercise10_3.java"/>
+  <file path="Exercise10_4.java"/>
+  <file path="Exercise10_5.java"/>
+  <file path="Exercise10_6.java"/>
+  <file path="Exercise10_7.java"/>
+  <file path="Exercise10_8.java"/>
+  <file path="Exercise10_9.java"/>
+  <file path="Exercise11_1.java"/>
+  <file path="Exercise11_2.java"/>
+  <file path="Exercise11_3.java"/>
+  <file path="Exercise11_4.java"/>
+  <file path="Exercise12_1.java"/>
+  <file path="Exercise12_2.java"/>
+  <file path="Exercise12_3.java"/>
+  <file path="Exercise12_4.java"/>
+  <file path="Exercise12_5.java"/>
+  <file path="Exercise12_6.java"/>
+  <file path="Exercise12_7.java"/>
+  <file path="Exercise12_8.java"/>
+  <file path="Exercise13_1.java"/>
+  <file path="Exercise13_10.java"/>
+  <file path="Exercise13_11.java"/>
+  <file path="Exercise13_12.java"/>
+  <file path="Exercise13_13.java"/>
+  <file path="Exercise13_14.java"/>
+  <file path="Exercise13_15.java"/>
+  <file path="Exercise13_16.java"/>
+  <file path="Exercise13_17.java"/>
+  <file path="Exercise13_18.java"/>
+  <file path="Exercise13_19.java"/>
+  <file path="Exercise13_2.java"/>
+  <file path="Exercise13_20.java"/>
+  <file path="Exercise13_21.java"/>
+  <file path="Exercise13_3.java"/>
+  <file path="Exercise13_4.java"/>
+  <file path="Exercise13_5.java"/>
+  <file path="Exercise13_6.java"/>
+  <file path="Exercise13_7.java"/>
+  <file path="Exercise13_8.java"/>
+  <file path="Exercise13_9.java"/>
+  <file path="Exercise14_1.java"/>
+  <file path="Exercise14_10.java"/>
+  <file path="Exercise14_11.java"/>
+  <file path="Exercise14_12.java"/>
+  <file path="Exercise14_13.java"/>
+  <file path="Exercise14_14.java"/>
+  <file path="Exercise14_15.java"/>
+  <file path="Exercise14_2.java"/>
+  <file path="Exercise14_3.java"/>
+  <file path="Exercise14_4.java"/>
+  <file path="Exercise14_5.java"/>
+  <file path="Exercise14_6.java"/>
+  <file path="Exercise14_7.java"/>
+  <file path="Exercise14_8.java"/>
+  <file path="Exercise14_9.java"/>
+  <file path="Exercise15_1.java"/>
+  <file path="Exercise15_10.java"/>
+  <file path="Exercise15_11.java"/>
+  <file path="Exercise15_12.java"/>
+  <file path="Exercise15_13.java"/>
+  <file path="Exercise15_14.java"/>
+  <file path="Exercise15_15.java"/>
+  <file path="Exercise15_17.java"/>
+  <file path="Exercise15_18.java"/>
+  <file path="Exercise15_19.java"/>
+  <file path="Exercise15_2.java"/>
+  <file path="Exercise15_20.java"/>
+  <file path="Exercise15_21.java"/>
+  <file path="Exercise15_3.java"/>
+  <file path="Exercise15_4.java"/>
+  <file path="Exercise15_5.java"/>
+  <file path="Exercise15_6.java"/>
+  <file path="Exercise15_7.java"/>
+  <file path="Exercise15_8.java"/>
+  <file path="Exercise15_9.java"/>
+  <file path="Exercise16_1.java"/>
+  <file path="Exercise16_10.java"/>
+  <file path="Exercise16_11.java"/>
+  <file path="Exercise16_12.java"/>
+  <file path="Exercise16_13.java"/>
+  <file path="Exercise16_14.java"/>
+  <file path="Exercise16_15.java"/>
+  <file path="Exercise16_16.java"/>
+  <file path="Exercise16_17.java"/>
+  <file path="Exercise16_18.java"/>
+  <file path="Exercise16_19.java"/>
+  <file path="Exercise16_2.java"/>
+  <file path="Exercise16_20.java"/>
+  <file path="Exercise16_21.java"/>
+  <file path="Exercise16_22.java"/>
+  <file path="Exercise16_23.java"/>
+  <file path="Exercise16_3.java"/>
+  <file path="Exercise16_4.java"/>
+  <file path="Exercise16_5.java"/>
+  <file path="Exercise16_6.java"/>
+  <file path="Exercise16_7.java"/>
+  <file path="Exercise16_8.java"/>
+  <file path="Exercise16_9.java"/>
+  <file path="Exercise17_1.java"/>
+  <file path="Exercise17_10.java"/>
+  <file path="Exercise17_2.java"/>
+  <file path="Exercise17_3.java"/>
+  <file path="Exercise17_4.java"/>
+  <file path="Exercise17_5.java"/>
+  <file path="Exercise17_6.java"/>
+  <file path="Exercise17_7.java"/>
+  <file path="Exercise17_8.java"/>
+  <file path="Exercise17_9.java"/>
+  <file path="Exercise18_1.java"/>
+  <file path="Exercise18_2.java"/>
+  <file path="Exercise18_3.java"/>
+  <file path="Exercise18_4.java"/>
+  <file path="Exercise18_5.java"/>
+  <file path="Exercise18_6.java"/>
+  <file path="Exercise18_7.java"/>
+  <file path="Exercise18_8.java"/>
+  <file path="Exercise18_9.java"/>
+  <file path="Exercise19_1.java"/>
+  <file path="Exercise19_10.java"/>
+  <file path="Exercise19_11.java"/>
+  <file path="Exercise19_12.java"/>
+  <file path="Exercise19_13.java"/>
+  <file path="Exercise19_14.java"/>
+  <file path="Exercise19_15.java"/>
+  <file path="Exercise19_19.java"/>
+  <file path="Exercise19_2.java"/>
+  <file path="Exercise19_20.java"/>
+  <file path="Exercise19_21.java"/>
+  <file path="Exercise19_22.java"/>
+  <file path="Exercise19_23.java"/>
+  <file path="Exercise19_3.java"/>
+  <file path="Exercise19_4.java"/>
+  <file path="Exercise19_5.java"/>
+  <file path="Exercise19_6.java"/>
+  <file path="Exercise19_7.java"/>
+  <file path="Exercise19_8.java"/>
+  <file path="Exercise19_9.java"/>
+  <file path="Exercise20_1.java"/>
+  <file path="Exercise20_2.java"/>
+  <file path="Exercise20_3.java"/>
+  <file path="Exercise20_4.java"/>
+  <file path="Exercise20_5.java"/>
+  <file path="Exercise20_6.java"/>
+  <file path="Exercise22_1.java"/>
+  <file path="Exercise22_2.java"/>
+  <file path="Exercise22_3.java"/>
+  <file path="Exercise22_4.java"/>
+  <file path="Exercise22_5.java"/>
+  <file path="Exercise22_6.java"/>
+  <file path="Exercise22_7.java"/>
+  <file path="Exercise22_8.java"/>
+  <file path="Exercise22_9.java"/>
+  <file path="Exercise24_1.java"/>
+  <file path="Exercise24_10.java"/>
+  <file path="Exercise24_11.java"/>
+  <file path="Exercise24_12.java"/>
+  <file path="Exercise24_2.java"/>
+  <file path="Exercise24_3.java"/>
+  <file path="Exercise24_4.java"/>
+  <file path="Exercise24_5.java"/>
+  <file path="Exercise24_6.java"/>
+  <file path="Exercise24_7.java"/>
+  <file path="Exercise24_8.java"/>
+  <file path="Exercise24_9.java"/>
+  <file path="Exercise25_1.java"/>
+  <file path="Exercise25_11Reader.java"/>
+  <file path="Exercise25_11Writer.java"/>
+  <file path="Exercise25_2.java"/>
+  <file path="Exercise25_3.java"/>
+  <file path="Exercise25_4.java"/>
+  <file path="Exercise25_5.java"/>
+  <file path="Exercise25_6.java"/>
+  <file path="Exercise25_7.java"/>
+  <file path="Exercise25_8.java"/>
+  <file path="Exercise26_1.java"/>
+  <file path="Exercise26_2.java"/>
+  <file path="Exercise26_3.java"/>
+  <file path="Exercise26_4.java"/>
+  <file path="Exercise26_5.java"/>
+  <file path="Exercise26_6.java"/>
+  <file path="Exercise27_1.java"/>
+  <file path="Exercise27_2.java"/>
+  <file path="Exercise27_3.java"/>
+  <file path="Exercise27_3a.java"/>
+  <file path="Exercise27_4.java"/>
+  <file path="Exercise27_5.java"/>
+  <file path="Exercise27_6.java"/>
+  <file path="Exercise27_7.java"/>
+  <file path="Exercise27_8.java"/>
+  <file path="Exercise27_9.java"/>
+  <file path="Exercise28_1.java"/>
+  <file path="Exercise28_2.java"/>
+  <file path="Exercise28_3.java"/>
+  <file path="Exercise28_4.java"/>
+  <file path="Exercise28_5.java"/>
+  <file path="Exercise28_6.java"/>
+  <file path="Exercise28_7.java"/>
+  <file path="Exercise28_8.java"/>
+  <file path="Exercise28_9.java"/>
+  <file path="Exercise29_1.java"/>
+  <file path="Exercise29_10.java"/>
+  <file path="Exercise29_11.java"/>
+  <file path="Exercise29_12.java"/>
+  <file path="Exercise29_12CellRenderer.java"/>
+  <file path="Exercise29_13.java"/>
+  <file path="Exercise29_1BarChart.java"/>
+  <file path="Exercise29_1ChartModel.java"/>
+  <file path="Exercise29_1PieChart.java"/>
+  <file path="Exercise29_2.java"/>
+  <file path="Exercise29_3.java"/>
+  <file path="Exercise29_4.java"/>
+  <file path="Exercise29_5.java"/>
+  <file path="Exercise29_6.java"/>
+  <file path="Exercise29_7.java"/>
+  <file path="Exercise29_9.java"/>
+  <file path="Exercise29_9CellRenderer.java"/>
+  <file path="Exercise2_1.java"/>
+  <file path="Exercise2_10.java"/>
+  <file path="Exercise2_11.java"/>
+  <file path="Exercise2_12.java"/>
+  <file path="Exercise2_13.java"/>
+  <file path="Exercise2_14.java"/>
+  <file path="Exercise2_15.java"/>
+  <file path="Exercise2_16.java"/>
+  <file path="Exercise2_17.java"/>
+  <file path="Exercise2_18a.java"/>
+  <file path="Exercise2_18b.java"/>
+  <file path="Exercise2_19a.java"/>
+  <file path="Exercise2_19b.java"/>
+  <file path="Exercise2_2.java"/>
+  <file path="Exercise2_20.java"/>
+  <file path="Exercise2_3.java"/>
+  <file path="Exercise2_4.java"/>
+  <file path="Exercise2_5.java"/>
+  <file path="Exercise2_6.java"/>
+  <file path="Exercise2_7.java"/>
+  <file path="Exercise2_8.java"/>
+  <file path="Exercise2_9.java"/>
+  <file path="Exercise30_1.java"/>
+  <file path="Exercise30_2.java"/>
+  <file path="Exercise30_3.java"/>
+  <file path="Exercise30_4.java"/>
+  <file path="Exercise30_5.java"/>
+  <file path="Exercise30_5ChartController.java"/>
+  <file path="Exercise30_6.java"/>
+  <file path="Exercise30_7.java"/>
+  <file path="Exercise30_8.java"/>
+  <file path="Exercise30_9.java"/>
+  <file path="Exercise31_1.java"/>
+  <file path="Exercise31_2.java"/>
+  <file path="Exercise31_3.java"/>
+  <file path="Exercise31_4.java"/>
+  <file path="Exercise31_5.java"/>
+  <file path="Exercise31_6.java"/>
+  <file path="Exercise32_1.java"/>
+  <file path="Exercise32_2.java"/>
+  <file path="Exercise32_6.java"/>
+  <file path="Exercise33_1.java"/>
+  <file path="Exercise33_10.java"/>
+  <file path="Exercise33_11.java"/>
+  <file path="Exercise33_2.java"/>
+  <file path="Exercise33_3a.java"/>
+  <file path="Exercise33_3b.java"/>
+  <file path="Exercise33_4.java"/>
+  <file path="Exercise33_5.java"/>
+  <file path="Exercise33_6.java"/>
+  <file path="Exercise33_7.java"/>
+  <file path="Exercise33_8.java"/>
+  <file path="Exercise33_9.java"/>
+  <file path="Exercise35_10Client.java"/>
+  <file path="Exercise35_10Server.java"/>
+  <file path="Exercise35_1Client.java"/>
+  <file path="Exercise35_1Server.java"/>
+  <file path="Exercise35_2Client.java"/>
+  <file path="Exercise35_2Server.java"/>
+  <file path="Exercise35_3Client.java"/>
+  <file path="Exercise35_3Server.java"/>
+  <file path="Exercise35_4Client.java"/>
+  <file path="Exercise35_4Server.java"/>
+  <file path="Exercise35_5.java"/>
+  <file path="Exercise35_6Client.java"/>
+  <file path="Exercise35_6Server.java"/>
+  <file path="Exercise35_7.java"/>
+  <file path="Exercise35_8.java"/>
+  <file path="Exercise35_9.java"/>
+  <file path="Exercise3_1.java"/>
+  <file path="Exercise3_10.java"/>
+  <file path="Exercise3_11.java"/>
+  <file path="Exercise3_12.java"/>
+  <file path="Exercise3_13.java"/>
+  <file path="Exercise3_14.java"/>
+  <file path="Exercise3_15.java"/>
+  <file path="Exercise3_16.java"/>
+  <file path="Exercise3_17.java"/>
+  <file path="Exercise3_18.java"/>
+  <file path="Exercise3_19.java"/>
+  <file path="Exercise3_2.java"/>
+  <file path="Exercise3_20.java"/>
+  <file path="Exercise3_21.java"/>
+  <file path="Exercise3_22.java"/>
+  <file path="Exercise3_23.java"/>
+  <file path="Exercise3_24.java"/>
+  <file path="Exercise3_25.java"/>
+  <file path="Exercise3_26.java"/>
+  <file path="Exercise3_27.java"/>
+  <file path="Exercise3_28.java"/>
+  <file path="Exercise3_29.java"/>
+  <file path="Exercise3_3.java"/>
+  <file path="Exercise3_30.java"/>
+  <file path="Exercise3_31.java"/>
+  <file path="Exercise3_32.java"/>
+  <file path="Exercise3_33.java"/>
+  <file path="Exercise3_34.java"/>
+  <file path="Exercise3_35.java"/>
+  <file path="Exercise3_36.java"/>
+  <file path="Exercise3_4.java"/>
+  <file path="Exercise3_5.java"/>
+  <file path="Exercise3_6.java"/>
+  <file path="Exercise3_7.java"/>
+  <file path="Exercise3_8.java"/>
+  <file path="Exercise3_9.java"/>
+  <file path="Exercise5_1.java"/>
+  <file path="Exercise5_10.java"/>
+  <file path="Exercise5_11.java"/>
+  <file path="Exercise5_12.java"/>
+  <file path="Exercise5_13.java"/>
+  <file path="Exercise5_14.java"/>
+  <file path="Exercise5_15.java"/>
+  <file path="Exercise5_16.java"/>
+  <file path="Exercise5_17.java"/>
+  <file path="Exercise5_18.java"/>
+  <file path="Exercise5_19.java"/>
+  <file path="Exercise5_2.java"/>
+  <file path="Exercise5_20.java"/>
+  <file path="Exercise5_21.java"/>
+  <file path="Exercise5_22.java"/>
+  <file path="Exercise5_23.java"/>
+  <file path="Exercise5_24.java"/>
+  <file path="Exercise5_25.java"/>
+  <file path="Exercise5_3.java"/>
+  <file path="Exercise5_4.java"/>
+  <file path="Exercise5_5.java"/>
+  <file path="Exercise5_6.java"/>
+  <file path="Exercise5_7.java"/>
+  <file path="Exercise5_8.java"/>
+  <file path="Exercise5_9.java"/>
+  <file path="Exercise6_1.java"/>
+  <file path="Exercise6_10.java"/>
+  <file path="Exercise6_11.java"/>
+  <file path="Exercise6_12.java"/>
+  <file path="Exercise6_13.java"/>
+  <file path="Exercise6_14.java"/>
+  <file path="Exercise6_15.java"/>
+  <file path="Exercise6_16.java"/>
+  <file path="Exercise6_17.java"/>
+  <file path="Exercise6_18.java"/>
+  <file path="Exercise6_19.java"/>
+  <file path="Exercise6_2.java"/>
+  <file path="Exercise6_20.java"/>
+  <file path="Exercise6_21.java"/>
+  <file path="Exercise6_22.java"/>
+  <file path="Exercise6_23.java"/>
+  <file path="Exercise6_24.java"/>
+  <file path="Exercise6_25.java"/>
+  <file path="Exercise6_26.java"/>
+  <file path="Exercise6_27.java"/>
+  <file path="Exercise6_28.java"/>
+  <file path="Exercise6_3.java"/>
+  <file path="Exercise6_4.java"/>
+  <file path="Exercise6_5.java"/>
+  <file path="Exercise6_6.java"/>
+  <file path="Exercise6_7.java"/>
+  <file path="Exercise6_8.java"/>
+  <file path="Exercise6_9.java"/>
+  <file path="Exercise7_1.java"/>
+  <file path="Exercise7_10.java"/>
+  <file path="Exercise7_11.java"/>
+  <file path="Exercise7_12.java"/>
+  <file path="Exercise7_13.java"/>
+  <file path="Exercise7_14.java"/>
+  <file path="Exercise7_2.java"/>
+  <file path="Exercise7_3.java"/>
+  <file path="Exercise7_4.java"/>
+  <file path="Exercise7_5.java"/>
+  <file path="Exercise7_6.java"/>
+  <file path="Exercise7_7.java"/>
+  <file path="Exercise7_8.java"/>
+  <file path="Exercise7_9.java"/>
+  <file path="Exercise8_1.java"/>
+  <file path="Exercise8_10.java"/>
+  <file path="Exercise8_11.java"/>
+  <file path="Exercise8_12.java"/>
+  <file path="Exercise8_13.java"/>
+  <file path="Exercise8_14.java"/>
+  <file path="Exercise8_15.java"/>
+  <file path="Exercise8_16.java"/>
+  <file path="Exercise8_17.java"/>
+  <file path="Exercise8_18a.java"/>
+  <file path="Exercise8_18b.java"/>
+  <file path="Exercise8_19.java"/>
+  <file path="Exercise8_2.java"/>
+  <file path="Exercise8_20.java"/>
+  <file path="Exercise8_21.java"/>
+  <file path="Exercise8_22.java"/>
+  <file path="Exercise8_23.java"/>
+  <file path="Exercise8_24.java"/>
+  <file path="Exercise8_25.java"/>
+  <file path="Exercise8_3.java"/>
+  <file path="Exercise8_4.java"/>
+  <file path="Exercise8_5.java"/>
+  <file path="Exercise8_6.java"/>
+  <file path="Exercise8_7.java"/>
+  <file path="Exercise8_8.java"/>
+  <file path="Exercise8_9.java"/>
+  <file path="Exercise9_1.java"/>
+  <file path="Exercise9_2.java"/>
+  <file path="Exercise9_3.java"/>
+  <file path="Exercise9_4.java"/>
+  <file path="Exercise9_5.java"/>
+  <file path="Exercise9_6.java"/>
+  <file path="Fan.java"/>
+  <file path="FanControl.java"/>
+  <file path="FigurePanel.java"/>
+  <file path="FixedLengthStringIO.java"/>
+  <file path="Histogram.java"/>
+  <file path="ImageViewer.java"/>
+  <file path="InsertionSort.java"/>
+  <file path="LinearSearch.java"/>
+  <file path="Loan.java"/>
+  <file path="LoanApplet.java"/>
+  <file path="MessagePanel.java"/>
+  <file path="MyList.java"/>
+  <file path="MyTableModel.java"/>
+  <file path="NewDescriptionPanel.java"/>
+  <file path="RandomCharacter.java"/>
+  <file path="Rational.java"/>
+  <file path="SelectionSort.java"/>
+  <file path="StackOfIntegers.java"/>
+  <file path="StillClock.java"/>
+  <file path="Test.java"/>
+  <file path="WorldClock.java"/>
+</project>

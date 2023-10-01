@@ -1,0 +1,23 @@
+(*---------------------------------*)
+(*File name:       primeSieve.nb   *)
+(*author:          Xiaomin Bao     *)
+(*Created on:      August 9, 2006  *)
+(*Last revized on: June 12, 2015   *)
+(*---------------------------------*)
+(* This code implements the sieve of Eratosthenes *)
+primeSieve[n_,d_]:=Module[{u=Range[n], p=2},
+	If[d != 0,Print["Initially, the set of numbers = ", u]];
+	While[p<=Sqrt[n],
+		Do[u[[i]]= 0, {i,p^2,n,p}];(*replace the numbers of the form tpp with 0, where 1 <= t *)
+		If[d != 0,Print[ "when p = ",  p, ",  numbers remained = ", u]];
+		p++;
+		While[p<=Sqrt[n]&&u[[p]]==0, p++]; (* if u[[p]] = 0, then check next number *)
+	];
+	Select[u,(#>1)&] (* excluding all components which equal to 0 *)
+]
+m = 50;
+M = 200; (* If you want to test a specific number, just set m and M to that number *)
+n = RandomInteger[{m,M}];(* Select a number randomly from the interval [m,M]*)
+d = 0; (* If d != 0, the code will display all intermidiate results*)
+t = primeSieve[n,d];
+Print["The set of primes that are less than or equal to ", n, " = ", t];

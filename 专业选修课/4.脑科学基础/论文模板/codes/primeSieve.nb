@@ -1,0 +1,253 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9776,        244]
+NotebookOptionsPosition[      9533,        231]
+NotebookOutlinePosition[      9877,        246]
+CellTagsIndexPosition[      9834,        243]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"--", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"File", " ", 
+    RowBox[{"name", ":", "       ", 
+     RowBox[{"primeSieve", ".", "nb"}]}]}], "   ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"author", ":", "          ", 
+    RowBox[{"Xiaomin", " ", "Bao"}]}], "     ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Created", " ", 
+     RowBox[{"on", ":", "      ", 
+      RowBox[{"August", " ", "9"}]}]}], ",", " ", "2006"}], "  ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Last", " ", "revized", " ", 
+     RowBox[{"on", ":", " ", 
+      RowBox[{"June", " ", "12"}]}]}], ",", " ", "2015"}], "   ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"--", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "This", " ", "code", " ", "implements", " ", "the", " ", "sieve", " ", 
+    "of", " ", "Eratosthenes"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"primeSieve", "[", 
+     RowBox[{"n_", ",", "d_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"u", "=", 
+         RowBox[{"Range", "[", "n", "]"}]}], ",", 
+        RowBox[{"p", "=", "2"}]}], "}"}], ",", "\[IndentingNewLine]", "\t", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"d", " ", "\[NotEqual]", " ", "0"}], ",", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Initially, the set of numbers = \>\"", ",", " ", "u"}],
+           "]"}]}], "]"}], ";", "\[IndentingNewLine]", "\t", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{"p", "\[LessEqual]", 
+          RowBox[{"Sqrt", "[", "n", "]"}]}], ",", "\[IndentingNewLine]", 
+         "\t\t", 
+         RowBox[{
+          RowBox[{"Do", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"u", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "=", " ", "0"}], " ", ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              SuperscriptBox["p", "2"], ",", "n", ",", "p"}], "}"}]}], "]"}], 
+          ";", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{
+            "replace", " ", "the", " ", "numbers", " ", "of", " ", "the", " ",
+              "form", " ", "tpp", " ", "with", " ", "0"}], ",", 
+            RowBox[{"1", " ", "<=", " ", "t"}]}], " ", "*)"}], 
+          "\[IndentingNewLine]", "\t\t", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"d", " ", "\[NotEqual]", " ", "0"}], ",", 
+            RowBox[{"Print", "[", " ", 
+             RowBox[{
+             "\"\<when p = \>\"", ",", " ", "p", ",", 
+              "\"\<,  numbers remained = \>\"", ",", "u"}], "]"}]}], "]"}], 
+          ";", "\[IndentingNewLine]", "\t\t", 
+          RowBox[{"p", "++"}], ";", "\[IndentingNewLine]", "\t\t", 
+          RowBox[{"While", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"p", "\[LessEqual]", 
+              RowBox[{"Sqrt", "[", "n", "]"}]}], "&&", 
+             RowBox[{
+              RowBox[{"u", "[", 
+               RowBox[{"[", "p", "]"}], "]"}], "\[Equal]", "0"}]}], ",", 
+            RowBox[{"p", "++"}]}], "]"}], ";"}]}], " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"if", " ", 
+            RowBox[{"u", "[", 
+             RowBox[{"[", "p", "]"}], "]"}]}], " ", "=", " ", "0"}], ",", " ", 
+          RowBox[{"then", " ", "check", " ", "next", " ", "number"}]}], " ", 
+         "*)"}], "\[IndentingNewLine]", "\t", "]"}], ";", 
+       "\[IndentingNewLine]", "\t", 
+       RowBox[{"Select", "[", 
+        RowBox[{"u", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"#", ">", "1"}], ")"}], "&"}]}], "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"m", " ", "=", " ", "50"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"M", " ", "=", " ", "200"}], ";", " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+      RowBox[{
+      "If", " ", "you", " ", "want", " ", "to", " ", "test", " ", "a", " ", 
+       "specific", " ", "number"}], ",", " ", 
+      RowBox[{
+      "just", " ", "set", " ", "m", " ", "and", " ", "M", " ", "to", " ", 
+       "that", " ", "number"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"n", " ", "=", " ", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"{", 
+       RowBox[{"m", ",", "M"}], "}"}], "]"}]}], ";"}], 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Select", " ", "a", " ", "number", " ", "randomly", " ", "from", " ", 
+     "the", " ", 
+     RowBox[{"interval", " ", "[", 
+      RowBox[{"m", ",", "M"}], "]"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"d", " ", "=", " ", "0"}], ";", " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", " ", "d"}], " ", "\[NotEqual]", " ", "0"}], ",", " ", 
+      RowBox[{
+      "the", " ", "code", " ", "will", " ", "display", " ", "all", " ", 
+       "intermidiate", " ", "results"}]}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"t", "=", 
+     RowBox[{"primeSieve", "[", 
+      RowBox[{"n", ",", "d"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<The set of primes that are less or equal to \>\"", ",", "n", ",", 
+      "\"\< = \>\"", ",", " ", "t"}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.6430000312421017`*^9, 3.6430001224715223`*^9}, {
+   3.643000165392835*^9, 3.6430002142723618`*^9}, {3.6430003537288675`*^9, 
+   3.64300035522093*^9}, {3.6430004059717903`*^9, 3.6430004320702343`*^9}, 
+   3.6430004747753735`*^9, {3.64300059775725*^9, 3.6430006126577873`*^9}, 
+   3.6430006803756075`*^9, {3.643000831590416*^9, 3.6430008400694113`*^9}, {
+   3.643000897728141*^9, 3.6430008979422913`*^9}, 3.6430011008786607`*^9, {
+   3.643001150276539*^9, 3.6430012131419373`*^9}, {3.6430015363252306`*^9, 
+   3.6430015481886263`*^9}, {3.6430015831633034`*^9, 3.643001611426268*^9}, {
+   3.643001873673509*^9, 3.643001887610362*^9}, {3.6430019318576097`*^9, 
+   3.643001932929367*^9}, {3.6430019875719657`*^9, 3.6430019906351357`*^9}, {
+   3.643002033826666*^9, 3.6430020363524284`*^9}, {3.643002073154419*^9, 
+   3.643002102942459*^9}, 3.6430023519844027`*^9, {3.643002416854203*^9, 
+   3.6430024526454787`*^9}, {3.64300253782965*^9, 3.643002552246834*^9}, {
+   3.6430026621104383`*^9, 3.643002815158558*^9}, {3.643002868900508*^9, 
+   3.6430029327566123`*^9}, {3.6430030493109455`*^9, 3.64300317233986*^9}, {
+   3.643003215568384*^9, 3.643003238756775*^9}, {3.6430032828529396`*^9, 
+   3.6430032850564737`*^9}, 3.643003352992462*^9, {3.6430034000016894`*^9, 
+   3.643003428340679*^9}, 3.6430034810999527`*^9, {3.64300351533916*^9, 
+   3.64300352731059*^9}, {3.6430036140428596`*^9, 3.643003614481164*^9}, {
+   3.643003691197365*^9, 3.6430037172607684`*^9}, 3.6430038236709285`*^9, 
+   3.6430045947515955`*^9, 3.643004633678092*^9, {3.643004664037548*^9, 
+   3.643004700614374*^9}, {3.643004753287593*^9, 3.6430047896402597`*^9}, 
+   3.6430048589582233`*^9, {3.643004987605095*^9, 3.643004995351573*^9}, {
+   3.643005027279126*^9, 3.64300503366063*^9}, {3.6430050940672965`*^9, 
+   3.643005102121992*^9}, {3.643005140147853*^9, 3.6430051730670977`*^9}, {
+   3.6430052251479*^9, 3.6430052509791346`*^9}, 3.643005292339349*^9, {
+   3.6430053223865795`*^9, 3.6430053399089584`*^9}, {3.6430076961167326`*^9, 
+   3.6430077355645847`*^9}, {3.643059964848506*^9, 3.643059994223276*^9}, {
+   3.6430600263479943`*^9, 3.643060086293378*^9}, {3.643060116936043*^9, 
+   3.6430601994674177`*^9}, {3.643060232334634*^9, 3.643060235496892*^9}, 
+   3.643060295757476*^9, {3.643060333620267*^9, 3.643060415202927*^9}, {
+   3.6430604507350607`*^9, 3.64306055555416*^9}, {3.64306078852888*^9, 
+   3.6430609823059072`*^9}, {3.643061017987114*^9, 3.643061113449609*^9}, {
+   3.6430632868340282`*^9, 3.6430632881669827`*^9}, {3.6430639508384986`*^9, 
+   3.6430639995959635`*^9}, {3.6430661926735516`*^9, 3.643066193048802*^9}, {
+   3.643069991532446*^9, 3.6430701101172895`*^9}}]
+},
+WindowSize->{1055, 527},
+WindowMargins->{{Automatic, 170}, {-15, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 8971, 209, 486, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
