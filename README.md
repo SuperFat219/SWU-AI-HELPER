@@ -1,13 +1,3 @@
-<!--
- * @Author: Johnson 1103894895@qq.com
- * @Date: 2023-10-01 10:57:11
- * @LastEditors: Johnson 1103894895@qq.com
- * @LastEditTime: 2023-10-01 20:40:05
- * @FilePath: \SWU-AI-HELPER\README.md
- * @Description: 
- * 
- * Copyright (c) 2023 by Johnson, All Rights Reserved. 
--->
 # 西南大学人工智能学院生存指南
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)、[浙江大学](https://github.com/QSCTech/zju-icicles)和[西南大学软件学院](https://github.com/SambacFeng/SWU-SE-HELPER)相关项目启发，创立了本项目
