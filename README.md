@@ -2,7 +2,7 @@
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)、[浙江大学](https://github.com/QSCTech/zju-icicles)和[西南大学软件学院](https://github.com/SambacFeng/SWU-SE-HELPER)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[Yan Zhongsheng](https://github.com/ZS-Yan)，[Wang Fudi](https://github.com/Blue16-WangFudi)
+感谢对本项目贡献的同学：[Yan Zhongsheng](https://github.com/SuperFat219)，[Wang Fudi](https://github.com/Blue16-WangFudi)
 ## 前言
 
 前人走过的弯路，后人便不必再走。
